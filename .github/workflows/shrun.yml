@@ -3,8 +3,7 @@ on: push
 jobs:
   run_example_job:
     runs-on: ubuntu-latest
-    working-directory: .
-   
+     
     steps:
     - name: print out example job
       uses: appleboy/ssh-action@v1.0.3

@@ -5,16 +5,6 @@ jobs:
     runs-on: ubuntu-latest
      
     steps:
-    - name: print out example job
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER_NAME }}
-        key: ${{ secrets.Private_Key }}
-        port: ${{ secrets.PORT }}
-         
-        script: |
-           touch new1.txt
     - name: run a checkout
       uses: actions/checkout@v4
     - name: run shell commands  
@@ -30,6 +20,18 @@ jobs:
         port: ${{ secrets.PORT }}
         source: ${{ github.workspace }}/first.sh
         target: /home/ubuntu/
+        
+    - name: print out example job
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER_NAME }}
+        key: ${{ secrets.Private_Key }}
+        port: ${{ secrets.PORT }}
+         
+        run: sh /home/ubuntu/github/workspace/first.sh
+
+        
       
           
           

@@ -20,7 +20,7 @@ jobs:
     - name: run shell commands  
       run: |
         ls ${{ github.workspace }}
-        cp ${{ github.workspace }}/first.sh /home/ubuntu/
+        scp ${{ github.workspace }}/first.sh ${{ secrets.USER_NAME }}@${{ secrets.HOST }}/home/ubuntu/
       
           
           

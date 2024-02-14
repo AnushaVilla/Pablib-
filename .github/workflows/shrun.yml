@@ -12,6 +12,6 @@ jobs:
         username: ${{ secrets.USER_NAME }}
         key: ${{ secrets.Private_Key }}
         port: ${{ secrets.PORT }}
-        command_timeout: 30m
+        command_timeout: 30m 
         script: |
            touch new1.txt

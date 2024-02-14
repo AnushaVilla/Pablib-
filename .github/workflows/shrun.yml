@@ -29,7 +29,7 @@ jobs:
         key: ${{ secrets.Private_Key }}
         port: ${{ secrets.PORT }}
          
-        run: |
+        script: |
           pwd
           sh /home/ubuntu/github/workspace/first.sh
 

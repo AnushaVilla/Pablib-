@@ -16,9 +16,9 @@ jobs:
         script: |
            touch new1.txt
     - name: run a checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: run shell commands  
-      run: echo source ${GITHUB_ACTION_PATH}
+      run: cp "${{ github.action_path }}/first.sh" /home/ubuntu/
           
           
   

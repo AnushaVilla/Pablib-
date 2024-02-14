@@ -15,9 +15,10 @@ jobs:
          
         script: |
            touch new1.txt
-    - name: run a firstscript
+    - name: run a checkout
       uses: actions/checkout@v3
-        run: |
-          cp first.sh /hom/ubuntu/first.sh
+    - name: run shell commands  
+      run: cp first.sh /hom/ubuntu/first.sh
+          
           
   

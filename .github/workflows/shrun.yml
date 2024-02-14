@@ -17,5 +17,6 @@ jobs:
            touch new1.txt
     - name: run a firstscript
       uses: actions/checkout@v3
-        script: sh ./first.sh
+        script: |
+          sh ./first.sh
   

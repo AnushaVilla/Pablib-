@@ -20,7 +20,16 @@ jobs:
     - name: run shell commands  
       run: |
         ls ${{ github.workspace }}
-        scp ${{ github.workspace }}/first.sh ${{ secrets.USER_NAME }}@${{ secrets.HOST }}/home/ubuntu/
+        
+    - name: copy file to server
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER_NAME }}
+        key: ${{ secrets.Private_Key }}
+        port: ${{ secrets.PORT }}
+        source: ${{ github.workspace }}/first.sh
+        target: /home/ubuntu/
       
           
           

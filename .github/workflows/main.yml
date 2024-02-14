@@ -1,4 +1,4 @@
-name: Shworkfow
+name: Shworkflow
 on: push
 jobs:
   build:

@@ -18,7 +18,9 @@ jobs:
     - name: run a checkout
       uses: actions/checkout@v4
     - name: run shell commands  
-      run: cp "${{ github.action_path }}/first.sh" /home/ubuntu/
+      run: |
+        ls ${{ github.workspace }}
+      
           
           
   

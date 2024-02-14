@@ -15,5 +15,5 @@ jobs:
          
         script: |
            touch new1.txt
-           - name: run a firstscript
-        run: sh ./first.sh
+    - name: run a firstscript
+      run: sh ./first.sh

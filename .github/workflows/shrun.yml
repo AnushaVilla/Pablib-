@@ -3,6 +3,7 @@ on: push
 jobs:
   run_example_job:
     runs-on: ubuntu-latest
+    working-directory: .
    
     steps:
     - name: print out example job
@@ -18,7 +19,7 @@ jobs:
     - name: run a checkout
       uses: actions/checkout@v3
     - name: run shell commands  
-      run: sh first.sh 
+      run: cp first.sh /home/ubuntu/
           
           
   
